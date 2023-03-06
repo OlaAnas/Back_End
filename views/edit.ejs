@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Welcome To Facebook</h1>
+
+    <div class="link-container">
+        <nav class="links">
+            <a href="/">Home</a>           
+        </nav>
+    </div>
+
+    <form action="/update-post/<%=user._id %>" method="post" id="form">
+    <div class="article-info">
+        <input type="text" name="title" id="post-title" value="<%= user.title %>">
+        <textarea name="articleContent" id="article-content"><%= user.article %></textarea>
+    </div>
+    
+        <button id="sub-btn">Submit</button>
+    </form>
+    
+</body>
+</html>

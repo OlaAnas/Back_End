@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Article</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head> 
+<body>
+    <h1>Welcome To Facebook</h1>
+
+    <div class="link-container">
+        <nav class="links">
+            <a href="/">Home</a>           
+        </nav>
+    </div>
+
+    <div class="container">
+    <div class="article-info">
+        <h2><%=user.title %></h2>
+        <p name="articleContent" id="article-content"><%= user.article %></p>
+        <p class="time"><%= user.created_at %></p> 
+    </div>
+
+    <div class="btns">
+        <a href="/edit/<%=user._id %>" class="edit">Edit</a>                   
+        <form action="/delete-user/<%= user._id %>" method="post">
+            <button>Delete</button>
+        </form>
+    </div>
+</div>
+
+    <footer> &copy; Made By Ola</footer>   
+</body>
+</html>
